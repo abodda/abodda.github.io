@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to my personal website! Learn about my skills, projects, and how to get in touch.">
+  <title>John Doe - Personal Website</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header Section */
+    header {
+      width: 100%;
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: center;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    header nav a:hover {
+      color: #FFD700;
+    }
+
+    /* Hero Section */
+    section.hero {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: #f4f4f4 url('https://source.unsplash.com/1600x900/?nature,technology') no-repeat center center/cover;
+      color: #333;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .hero a {
+      background: #333;
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+    }
+
+    .hero a:hover {
+      background: #FFD700;
+    }
+
+    /* About Me Section */
+    section.about {
+      width: 90%;
+      max-width: 1000px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Portfolio Section */
+    section.portfolio {
+      width: 90%;
+      max-width: 1000px;
+      padding: 40px 20px;
+    }
+
+    .portfolio h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s;
+    }
+
+    .portfolio-item:hover {
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .portfolio-item h3 {
+      margin: 15px;
+      font-size: 1.2rem;
+    }
+
+    .portfolio-item p {
+      margin: 0 15px 15px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .portfolio-item a {
+      display: block;
+      margin: 0 15px 15px;
+      text-align: center;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .portfolio-item a:hover {
+      color: #FFD700;
+    }
+
+    /* Contact Section */
+    section.contact {
+      width: 90%;
+      max-width: 1000px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .contact a {
+      background: #333;
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .contact a:hover {
+      background: #FFD700;
+    }
+
+    /* Footer Section */
+    footer {
+      width: 100%;
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Hi, I'm John Doe</h1>
+      <p>Web Developer | Designer | Problem Solver</p>
+      <a href="#contact">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate web developer with extensive experience creating responsive, user-friendly websites. I specialize in frontend and backend development, focusing on delivering high-quality, well-optimized web solutions.
+    </p>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <h2>My Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="https://source.unsplash.com/400x300/?project" alt="Project 1">
+        <h3>Project Title 1</h3>
+        <p>Brief description of the project.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://source.unsplash.com/400x300/?code" alt="Project 2">
+        <h3>Project Title 2</h3>
+        <p>Brief description of the project.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://source.unsplash.com/400x300/?design" alt="Project 3">
+        <h3>Project Title 3</h3>
+        <p>Brief description of the project.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to connect with me, feel free to reach out via email or social media!</p>
+    <a href="mailto:johndoe@example.com">Email Me</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2023 John Doe. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
