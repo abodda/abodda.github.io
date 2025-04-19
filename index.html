@@ -3,239 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #2ecc71;
-            --secondary-color: #27ae60;
-            --dark-color: #2c3e50;
-            --light-color: #ffffff;
-            --background: #f8f9fa;
-            --text-color: #333;
-        }
-
-        [data-theme="dark"] {
-            --background: #1a1a1a;
-            --text-color: #fff;
-            --dark-color: #e0e0e0;
-            --light-color: #2d2d2d;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-        }
-
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            background-color: var(--background);
-            color: var(--text-color);
-            overflow-x: hidden;
-        }
-
-        /* Floating Navigation */
-        .nav-container {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.9);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        /* Gradient Animated Hero */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            animation: rotate 20s linear infinite;
-        }
-
-        /* Skill Progress Bars */
-        .skill-bar {
-            height: 10px;
-            background: #eee;
-            border-radius: 5px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .progress {
-            height: 100%;
-            background: var(--primary-color);
-            width: 0;
-            transition: width 1s ease-in-out;
-        }
-
-        /* Glassmorphism Cards */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* Hover Effects */
-        .hover-scale {
-            transition: transform 0.3s ease;
-        }
-
-        .hover-scale:hover {
-            transform: scale(1.05);
-        }
-
-        /* Project Grid */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-        }
-
-        .project-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-        }
-
-        .project-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .project-card:hover .project-overlay {
-            opacity: 1;
-        }
-
-        /* Theme Switcher */
-        .theme-switcher {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
-            background: rgba(255,255,255,0.9);
-            padding: 1rem;
-            border-radius: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .theme-color {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            cursor: pointer;
-            border: 2px solid transparent;
-        }
-
-        .theme-color.active {
-            border-color: var(--text-color);
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        /* Add more responsive styles */
-        @media (max-width: 768px) {
-            .nav-container {
-                padding: 0.5rem 1rem;
-            }
-            
-            .nav-links {
-                gap: 1rem;
-            }
-        }
-    </style>
+    <title>Your Name | Programmer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav-container">
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Your<span>Name</span></a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="glass-card">
-            <h1>Creative Developer</h1>
-            <p>Turning ideas into digital experiences</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Your Name</span></h1>
+                <p>Full-Stack Developer | Open-Source Contributor</p>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <a href="#contact" class="btn">Hire Me</a>
+            </div>
+            <div class="hero-image">
+                <img src="your-image.jpg" alt="Your Name">
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="project-grid">
-            <div class="project-card hover-scale">
-                <img src="project1.jpg" alt="Project 1" style="width:100%">
-                <div class="project-overlay">
-                    <button class="project-details">View Details</button>
-                </div>
-            </div>
-            <!-- Add more project cards -->
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About <span>Me</span></h2>
+            <p>I'm a passionate developer with expertise in <strong>JavaScript, Python, React, and Node.js</strong>. I love building scalable web applications and contributing to open-source projects.</p>
+            <p>When I'm not coding, I enjoy writing tech blogs, mentoring new developers, and exploring new frameworks.</p>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
-        <div class="glass-card">
-            <h2>Technical Skills</h2>
-            <div class="skill">
-                <p>Web Development</p>
-                <div class="skill-bar">
-                    <div class="progress" data-width="95%"></div>
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>My <span>Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-git-alt"></i>
+                    <h3>Git</h3>
                 </div>
             </div>
-            <!-- Add more skills -->
         </div>
     </section>
 
-    <!-- Theme Switcher -->
-    <div class="theme-switcher">
-        <div class="theme-color" data-color="#2ecc71" style="background
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In <span>Touch</span></h2>
+            <form action="https://formsubmit.co/youremail@example.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
